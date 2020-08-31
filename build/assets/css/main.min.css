@@ -329,7 +329,19 @@ hr {
 #features {
   background: #f9f9f9;
   text-align: center;
-  position: relative; }
+  position: relative;
+  height: 500px; }
+  #features:after {
+    bottom: 0;
+    position: absolute;
+    background: inherit;
+    content: " ";
+    height: 100%;
+    left: 0;
+    right: 0;
+    transform: skewY(-10deg);
+    transform-origin: 100%;
+    z-index: -1; }
   #features h2 {
     margin: 80px 0; }
 
@@ -354,6 +366,29 @@ hr {
 .device {
   border-top: 3px solid #00adff; }
 
+#discount {
+  margin-top: 65px; }
+
+.discountLayout {
+  display: flex;
+  align-items: center;
+  justify: center; }
+
+.offer {
+  width: 40%; }
+
+.offer .button {
+  background: #009efd;
+  background: linear-gradient(140deg, #009efd 0%, #15c9cb 40%, #2af598 100%);
+  color: white;
+  padding: 10px 80px;
+  font-size: 18px; }
+
+#download {
+  background: #5825ec;
+  padding: 100px 0;
+  margin-top: -70px; }
+
 .flex-video {
   height: 0;
   margin-bottom: 0.88889rem;
@@ -377,7 +412,7 @@ hr {
   height: 700px;
   color: white;
   text-align: center;
-  overflow: auto; }
+  overflow: hidden; }
   #header img {
     max-width: 500px;
     width: 100%; }
