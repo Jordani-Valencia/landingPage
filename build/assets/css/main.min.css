@@ -198,7 +198,7 @@ body {
   -webkit-text-size-adjust: 100%; }
 
 .wrapper {
-  width: 100%;
+  width: 90%;
   max-width: 1100px;
   margin: 0 auto; }
 
@@ -326,11 +326,38 @@ hr {
   margin: 10px 0 30px;
   height: 0; }
 
+.main-nav {
+  display: flex;
+  margin-top: 20px; }
+  .main-nav li {
+    list-style: none; }
+  .main-nav a {
+    color: white;
+    display: block;
+    border-radius: 4px;
+    padding: 10px 50px;
+    text-decoration: none;
+    font-weight: 900;
+    text-transform: uppercase;
+    transition: all 0.2s ease; }
+  .main-nav a:hover, .main-nav a:visited {
+    color: #00adff; }
+  .main-nav li:first-child {
+    margin-right: auto; }
+
+a.download {
+  background: white;
+  color: #00adff;
+  box-shadow: 0 12px 10px -10px rgba(0, 0, 0, 0.2); }
+
 #features {
   background: #f9f9f9;
   text-align: center;
   position: relative;
   height: 500px; }
+  @media only screen and (max-width: 680px) {
+    #features {
+      height: auto; } }
   #features:after {
     bottom: 0;
     position: absolute;
@@ -349,6 +376,9 @@ hr {
   display: grid;
   grid-template-columns: repeat(3, auto);
   grid-gap: 40px; }
+  @media only screen and (max-width: 680px) {
+    .cards {
+      grid-template-columns: repeat(1, auto); } }
 
 .feature-card {
   background: white;
@@ -373,9 +403,21 @@ hr {
   display: flex;
   align-items: center;
   justify: center; }
+  @media only screen and (max-width: 680px) {
+    .discountLayout {
+      display: block; } }
+
+@media only screen and (max-width: 680px) {
+  img {
+    width: 100%;
+    max-width: 300px; } }
 
 .offer {
   width: 40%; }
+  @media only screen and (max-width: 680px) {
+    .offer {
+      width: 100%;
+      text-align: center; } }
 
 .offer .button {
   background: #009efd;
@@ -389,16 +431,24 @@ hr {
   text-align: center;
   background: url("../img/downloadBackground.jpg") no-repeat;
   background-size: cover;
+  background-position: center;
   padding: 100px 0;
   margin-top: -70px; }
+  @media only screen and (max-width: 680px) {
+    #download {
+      background: url("../img/downloadSmall.jpg") no-repeat;
+      margin-top: 75px;
+      padding: 60px; } }
 
 h2 {
   font-size: 60px;
   line-height: 1.05;
   text-transform: uppercase;
   font-weight: 900;
-  color: white;
   margin: 0; }
+  @media only screen and (max-width: 680px) {
+    h2 {
+      font-size: 44px; } }
 
 p {
   width: 100%;
@@ -411,6 +461,9 @@ p {
   width: 250px;
   margin: 0 15px;
   padding-left: 50px; }
+  @media only screen and (max-width: 680px) {
+    .button {
+      margin: 10px 15px; } }
 
 .apple:before, .google:before {
   position: absolute;
@@ -423,6 +476,17 @@ p {
 
 .google:before {
   content: url("../img/playicon.png"); }
+
+#footer {
+  text-align: center;
+  padding: 60px 0; }
+
+li {
+  list-style: none; }
+
+a {
+  padding: 0 20px;
+  text-transform: uppercase; }
 
 .flex-video {
   height: 0;
@@ -448,6 +512,9 @@ p {
   color: white;
   text-align: center;
   overflow: hidden; }
+  @media only screen and (max-width: 680px) {
+    #header {
+      height: 500px; } }
   #header img {
     max-width: 500px;
     width: 100%; }
@@ -455,30 +522,21 @@ p {
 article {
   width: 60%;
   margin: 0 auto; }
+  @media only screen and (max-width: 680px) {
+    article {
+      width: 100%; } }
 
 h1 {
   margin-bottom: 10px; }
+  @media only screen and (max-width: 680px) {
+    h1 {
+      margin-top: 60px; } }
 
-.main-nav {
-  display: flex;
-  margin-top: 20px; }
-  .main-nav li {
-    list-style: none; }
-  .main-nav a {
-    color: white;
-    display: block;
-    border-radius: 4px;
-    padding: 10px 50px;
-    text-decoration: none;
-    font-weight: 900;
-    text-transform: uppercase; }
-  .main-nav li:first-child {
-    margin-right: auto; }
-
-a.download {
-  background: white;
-  color: #00adff;
-  box-shadow: 0 12px 10px -10px rgba(0, 0, 0, 0.2); }
+p {
+  font-weight: 900; }
+  @media only screen and (max-width: 680px) {
+    p {
+      margin-bottom: 60px; } }
 
 #brands ul {
   padding: 20px 0;
@@ -492,3 +550,7 @@ a.download {
     list-style: none; }
   #brands ul li img {
     width: 100%; }
+
+.headline, .download {
+  color: white;
+  text-transform: uppercase; }
